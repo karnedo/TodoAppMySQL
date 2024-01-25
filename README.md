@@ -1,14 +1,12 @@
 # To-do App
 
-### RecyclerView
-Las tareas se muestras en una lista contenida en el RecyclerView. Al añadir una tarea, esta se mostrará en la primera posición. Al marcarla como terminada, se irá a la última posición. 
+### Arquitectura MCV
+La aplicación implementa la arquitectura Modelo-Controlador-Vista, la cual divide la aplicación en tres segmentos: los modelos, donde la información es dividida en calses; el controlador, donde se realizan las queries a la base de datos; y las vistas, donde se imprime la interfaz de usuario.
 
-### Firebase Realtime
-La aplicación almacena las tareas introducidas por el usuario con su nombre, su fecha de cumplimiento y su prioridad. Éstas se puedan marcar como completadas o borrarlas, todo ello siendo actualizado en tiempo real en la base de datos.
+### CRUD
+La aplicación realiza un CRUD para las tareas, además de presentar la habilidad de subir y descargar imágenes, así como una pantalla de registro e inicio de sesión.
 
-### Firebase Auth
-La aplicación permite el registro introduciendo un correo electrónico y contraseña, o directamente haciendo inicio de sesión con una cuenta Google. Las tareas no son públicas, es decir, cada usuario tiene su propia lista de tareas privada.
-El inicio de sesión se guarda automáticamente. Una vez introducida una cuenta, no se volverá a pedir al usuario. **Si se desea salir de la sesión, se puede hacer click en la imagen superior derecha.**
+### Base de datos
+El fichero SQL con la estructura de la base de datos se encuentra en el directorio raíz bajo el nombre de "database". Este está preparado para ser importando directamente desde la página de PhpMyAdmin. En adición, también se encuentran los ficheros PHP.
 
-### Firebase Storage
-La aplicación guarda imágenes en forma de fotos de perfil que aparecerán en la esquina superior derecha. **Para cambiar la foto, mantenga presionada la imagen superior derecha.** La imagen por defecto es el logo de la aplicación.
+El resto de características son idénticas a su proyecto homólogo de Firebase.
