@@ -4,14 +4,14 @@ ini_set('display_errors', 1);
 
 include 'connection.php';
 
-$idUser =$_POST['idUser'];
+$email =$_POST['email'];
 
 $result= array();
 $result['kraTASKS'] =array();
-$query ="SELECT * FROM kraTASKS WHERE idUser = ?";
+$query ="SELECT * FROM kraTASKS WHERE email = ?";
 //Preparamos la consulta
 $stmt = mysqli_prepare($connection, $query);
-mysqli_stmt_bind_param($stmt, 'i', $idUser);
+mysqli_stmt_bind_param($stmt, 's', $email);
 mysqli_stmt_execute($stmt);
 
 $response = mysqli_stmt_get_result($stmt);
@@ -19,6 +19,7 @@ $response = mysqli_stmt_get_result($stmt);
 while($row = mysqli_fetch_array($response))
 {
     $index['idTask'] =$row['0'];
+    $index['email'] =$row['1'];
     $index['name'] =$row['2'];
     $index['date'] =$row['3'];
     $index['priority'] =$row['4'];

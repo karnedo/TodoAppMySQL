@@ -34,6 +34,8 @@ import models.Task;
 import models.ProviderType;
 
 public class DatabaseController {
+
+    /* NOTA PARA LA CORRECCIÓN:  */
     private static final String DATABASE_URL = "http://192.168.1.71/";
     private static final String PREPROCESSOR_URL = DATABASE_URL + "tasks";
     private static final String INSERT_TASK = "/insert_.php";
